@@ -13,8 +13,8 @@
 @media only screen and (min-width: 0rem) {
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     :root {
-        --primary: #ff6a3e;
-        --primaryLight: #ffba43;
+        --primary: #83b8da;
+        --primaryLight: #0f57dd9f;
         --secondary: #ffba43;
         --secondaryLight: #ffba43;
         --headerColor: #1a1a1a;
@@ -27,7 +27,7 @@
         --accent: #334756;
 
         /* 13px - 16px */
-        --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
+        --topperFontSize: clamp(1.25rem, 1.6vw, 1rem);
         /* 31px - 49px */
         --headerFontSize: clamp(1.9375rem, 3.9vw, 3.0625rem);
         --bodyFontSize: 1rem;
@@ -1183,14 +1183,14 @@
             font-size: calc(16 / 16 * 1rem);
             font-weight: 700;
             /* 46px - 56px */
-            line-height: clamp(2.875em, 5.5vw, 3.5em);
+            // line-height: clamp(2.875em, 5.5vw, 3.5em); commented out so button can be aligned
             text-align: center;
             text-decoration: none;
             min-width: calc(150 / 16 * 1rem);
             margin: 0;
             /* prevents padding from adding to the width */
             box-sizing: border-box;
-            padding: 0 calc(32 / 16 * 1rem);
+            // padding: 0 calc(32 / 16 * 1rem); commented out so button can be aligned
             color: #fff;
             background-color: var(--primary);
             display: inline-block;

@@ -79,10 +79,10 @@
 
         .cs-text {
             /* 16px - 20px */
-            font-size: clamp(1rem, 1vw, 1.25rem);
+            font-size: clamp(1.75rem, 1vw, 1.25rem);
             line-height: 1.5em;
             text-align: center;
-            max-width: calc(518 / 16 * 1rem);
+            max-width: 37.375rem;
             /* 24px - 48px */
             margin: 0 0 clamp(1.5rem, 3vw, 3rem) 0;
             color: var(--bodyTextColorWhite);
@@ -168,7 +168,7 @@
 @media only screen and (min-width: 87.5rem) {
     #hero-998 {
         .cs-background {
-            background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Hero/table.jpg");
+            background: url("../images/tampa-cityview/1683921293314.webp");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
