@@ -54,25 +54,28 @@ permalink: "/contact/"
                 <span class="cs-topper">Contact Us</span>
                 <h2 class="cs-title">Make An Appointment</h2>
                 <!--Form-->
-                <form class="cs-form" id="cs-form-1105" name="Contact Form" method="post">
+                <form name="contact" method="POST" data-netlify="true" class="cs-form" id="cs-form-1105">
+                    <!-- Netlify needs this hidden input -->
+                    <input type="hidden" name="form-name" value="contact">
                     <label class="cs-label">
-                    Name
-                    <input class="cs-input" required type="text" id="name-1105" name="name" placeholder="Name">
+                        Name
+                        <input class="cs-input" required type="text" id="name-1105" name="name" placeholder="Name">
                     </label>
                     <label class="cs-label cs-email">
-                    Email
-                    <input class="cs-input" required type="email" id="email-1105" name="email" placeholder="Email">
+                        Email
+                        <input class="cs-input" required type="email" id="email-1105" name="email" placeholder="Email">
                     </label>
                     <label class="cs-label cs-phone">
-                    Phone
-                    <input class="cs-input" required type="phone" id="phone-1105" name="phone" placeholder="Phone">
+                        Phone
+                        <input class="cs-input" required type="text" id="phone-1105" name="phone" placeholder="Phone">
                     </label>
                     <label class="cs-label">
-                    Message
-                    <textarea class="cs-input cs-textarea" required name="Message" id="message-1105" placeholder="Write message..."></textarea>
+                        Message
+                        <textarea class="cs-input cs-textarea" required name="Message" id="message-1105" placeholder="Write message..."></textarea>
                     </label>
                     <button class="cs-button-solid cs-submit" type="submit">Make an Appointment</button>
                 </form>
+
             </div>
             <ul class="cs-ul">
                 <li class="cs-li">
