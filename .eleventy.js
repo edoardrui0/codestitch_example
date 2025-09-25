@@ -22,6 +22,9 @@ const filterPostDate = require("./src/config/filters/postDate");
 const filterIsoDate = require("./src/config/filters/isoDate");
 const isProduction = process.env.ELEVENTY_ENV === "PROD";
 
+// Images
+const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
+
 module.exports = function (eleventyConfig) {
     // ═════════════════════════════════════════════════════════════════════════
     // LANGUAGES
@@ -128,4 +131,47 @@ module.exports = function (eleventyConfig) {
         },
         htmlTemplateEngine: "njk", // Nunjucks for HTML templates
     };
+
+    // Images
+    eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+		// output image formats
+		formats: ["avif", "webp", "jpeg"],
+
+		// output image widths
+		widths: ["auto"],
+
+		// optional, attributes assigned on <img> nodes override these values
+		htmlOptions: {
+			imgAttributes: {
+				loading: "lazy",
+				decoding: "async",
+			},
+			pictureAttributes: {}
+		},
+	});
+
+//     eleventyConfig.addNunjucksAsyncShortcode("image", async function(src, alt, sizes = "(max-width: 600px) 400px, (max-width: 1200px) 800px, 1600px") {
+//         let metadata = await Image(src, {
+//           widths: [400, 800, 1600],  // auto-generate 3 sizes
+//           formats: ["webp", "jpeg"], // generate WebP + fallback JPEG
+//           outputDir: "./_site/images/", // where optimized images go
+//           urlPath: "/images/",          // public URL path
+//         });
+    
+//         let imageAttributes = {
+//           alt,
+//           sizes,
+//           loading: "lazy",
+//           decoding: "async",
+//         };
+    
+//         // Generates full <picture> HTML with <source> tags
+//         return Image.generateHTML(metadata, imageAttributes);
+//       });
+
+//       // 👇 Tell Eleventy to process .html files with Nunjucks
+//   return {
+//     htmlTemplateEngine: "njk",
+//     templateFormats: ["html", "njk", "md"] // include html here
+//   };
 };

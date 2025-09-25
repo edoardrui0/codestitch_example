@@ -28,6 +28,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 {% endblock %}
 
 {% block body %}
+    {# {% image "src/assets/images/misc/office-pexels.jpg", "Office room" %} #}
 
     <!-- ============================================ -->
     <!--                    Hero                      -->
@@ -72,9 +73,12 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <ul class="cs-card-group">
                 <li class="cs-item">
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg">
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg">
-                        <img loading="lazy" decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg" alt="living room" width="348" height="433" aria-hidden="true">
+                        {# <source type="image/webp" srcset="/images/office-pexels-400.webp 400w, /images/office-pexels-800.webp 800w, /images/office-pexels-1600.webp 1600w" sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1600px">
+                        <source type="image/jpeg" srcset="/images/office-pexels-400.jpeg 400w, /images/office-pexels-800.jpeg 800w, /images/office-pexels-1600.jpeg 1600w" sizes="(max-width: 600px) 400px, (max-width: 1200px) 800px, 1600px">
+                        <img alt="Office room" loading="lazy" decoding="async" src="/images/office-pexels-800.jpeg" width="800" height="600"> #}
+                        <source media="(max-width: 600px)" srcset="./assets/images/misc/office-pexels.jpg">
+                        <source media="(min-width: 601px)" srcset="./assets/images/misc/office-pexels.jpg">
+                        <img loading="lazy" decoding="async" src="./assets/images/misc/office-pexels.jpg" alt="office room" width="348" height="433" aria-hidden="true">
                     </picture>
                     <div class="cs-box">
                         <h3 class="cs-h3">Websites for Businesses</h3>
@@ -83,9 +87,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 </li>
                 <li class="cs-item">
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom-m.jpg">
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg">
-                        <img loading="lazy" decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/posh-bathroom.jpg" alt="living room" width="348" height="433" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="./assets/images/misc/seo-pexels.jpg">
+                        <source media="(min-width: 601px)" srcset="./assets/images/misc/seo-pexels.jpg">
+                        <img loading="lazy" decoding="async" src="./assets/images/misc/seo-pexels.jpg" alt="living room" width="348" height="433" aria-hidden="true">
                     </picture>
                     <div class="cs-box">
                         <h3 class="cs-h3">SEO Optimization</h3>
@@ -94,9 +98,9 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
                 </li>
                 <li class="cs-item">
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room-m.jpg">
-                        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg">
-                        <img loading="lazy" decoding="https://csimg.nyc3.digitaloceanspaces.com/Services/living-room.jpg" alt="living room" width="348" height="433" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="./assets/images/misc/website-design-pexels.jpg">
+                        <source media="(min-width: 601px)" srcset="./assets/images/misc/website-design-pexels.jpg">
+                        <img loading="lazy" decoding="async" src="./assets/images/misc/website-design-pexels.jpg" alt="living room" width="348" height="433" aria-hidden="true">
                     </picture>
                     <div class="cs-box">
                         <h3 class="cs-h3">Custom Website Design</h3>
