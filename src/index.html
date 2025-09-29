@@ -1,5 +1,5 @@
 ---
-title: "Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"
+title: "Bay Breeze Web Studio | Tampa, FL"
 description: "Meta description for the page"
 permalink: "/"
 tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
@@ -22,14 +22,12 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
         <link rel="stylesheet" href="/assets/css/local.css"/>
     {% endif %}
 
-    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customizing  -->
     <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
     <!-- {% include "components/home-schema.html" %} -->
 {% endblock %}
 
 {% block body %}
-    {# {% image "src/assets/images/misc/office-pexels.jpg", "Office room" %} #}
-
     <!-- ============================================ -->
     <!--                    Hero                      -->
     <!-- ============================================ -->
@@ -73,35 +71,36 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
             <ul class="cs-card-group">
                 <li class="cs-item">
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="./assets/images/misc/office-pexels.jpg">
-                        <source media="(min-width: 601px)" srcset="./assets/images/misc/office-pexels.jpg">
-                        <img loading="lazy" decoding="async" src="./assets/images/misc/office-pexels.jpg" alt="office room" width="348" height="433" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "./assets/images/misc/office-pexels.jpg" | resize({width: 413, height: 514}) | webp %}">
+                        <source media="(min-width: 601px)" srcset="{% getUrl "./assets/images/misc/office-pexels.jpg" | resize({width: 413, height: 514}) | webp %}">
+                        <img loading="lazy" decoding="async" src="{% getUrl "./assets/images/misc/office-pexels.jpg" | resize({width: 413, height: 514}) | webp %}" alt="office room" width="348" height="433" aria-hidden="true">
+
                     </picture>
                     <div class="cs-box">
                         <h3 class="cs-h3">Websites for Businesses</h3>
-                        <a class="cs-button-transparent" aria-label="read more about foyers" href="">Read More</a>
+                        <a class="cs-button-transparent" aria-label="read more about foyers" href="/websites-for-businesses/">Read More</a>
                     </div>
                 </li>
                 <li class="cs-item">
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="./assets/images/misc/seo-pexels.jpg">
-                        <source media="(min-width: 601px)" srcset="./assets/images/misc/seo-pexels.jpg">
-                        <img loading="lazy" decoding="async" src="./assets/images/misc/seo-pexels.jpg" alt="living room" width="348" height="433" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "./assets/images/misc/seo-pexels.jpg" | resize({width: 413, height: 514}) | webp %}">
+                        <source media="(min-width: 601px)" srcset="{% getUrl "./assets/images/misc/seo-pexels.jpg" | resize({width: 413, height: 514}) | webp %}">
+                        <img loading="lazy" decoding="async" src="{% getUrl "./assets/images/misc/seo-pexels.jpg" | resize({width: 413, height: 514}) | webp %}" alt="living room" width="348" height="433" aria-hidden="true">
                     </picture>
                     <div class="cs-box">
                         <h3 class="cs-h3">SEO Optimization</h3>
-                        <a class="cs-button-transparent" aria-label="read more about bathrooms" href="">Read More</a>
+                        <a class="cs-button-transparent" aria-label="read more about bathrooms" href="/seo/">Read More</a>
                     </div>
                 </li>
                 <li class="cs-item">
                     <picture class="cs-picture">
-                        <source media="(max-width: 600px)" srcset="./assets/images/misc/website-design-pexels.jpg">
-                        <source media="(min-width: 601px)" srcset="./assets/images/misc/website-design-pexels.jpg">
-                        <img loading="lazy" decoding="async" src="./assets/images/misc/website-design-pexels.jpg" alt="living room" width="348" height="433" aria-hidden="true">
+                        <source media="(max-width: 600px)" srcset="{% getUrl "./assets/images/misc/website-design-pexels.jpg" | resize({width: 413, height: 514}) | webp %}">
+                        <source media="(min-width: 601px)" srcset="{% getUrl "./assets/images/misc/website-design-pexels.jpg" | resize({width: 413, height: 514}) | webp %}">
+                        <img loading="lazy" decoding="async" src="{% getUrl "./assets/images/misc/website-design-pexels.jpg" | resize({width: 413, height: 514}) | webp %}" alt="living room" width="348" height="433" aria-hidden="true">
                     </picture>
                     <div class="cs-box">
                         <h3 class="cs-h3">Custom Website Design</h3>
-                        <a class="cs-button-transparent" aria-label="read more about living rooms" href="">Read More</a>
+                        <a class="cs-button-transparent" aria-label="read more about living rooms" href="/web-design/">Read More</a>
                     </div>
                 </li>
             </ul>

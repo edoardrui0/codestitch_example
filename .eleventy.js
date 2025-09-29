@@ -8,6 +8,7 @@
 const pluginImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
 const pluginMinifier = require("@codestitchofficial/eleventy-plugin-minify");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
+const eleventyPluginSharpImages = require("@codestitchofficial/eleventy-plugin-sharp-images");
 
 // ⚙️ Configuration Files
 const configSitemap = require("./src/config/plugins/sitemap");
@@ -118,6 +119,14 @@ module.exports = function (eleventyConfig) {
     // BUILD CONFIGURATION
     // Define input/output directories and template engine
     // ═════════════════════════════════════════════════════════════════════════
+
+      // other plugins
+
+    eleventyConfig.addPlugin(eleventyPluginSharpImages, {
+        urlPath: "/assets/images",
+        outputDir: "public/assets/images",
+        autoRotate: true, // Automatically fix EXIF orientation issues
+    });
 
     return {
         dir: {
